@@ -47,10 +47,7 @@ function checkBomb() {
         inputNumber.max = max;
         maximalNumber.innerHTML = max;
     }
-    console.log(`Guess = ${guess}`);
-    console.log(`Min = ${min}, Max = ${max}`);
 
-    console.log("Bomb = " + bomb);
     if (bomb == 1) {
         if (max-1 == bomb) {
             gameWin();
@@ -89,7 +86,6 @@ playAgainButton1.addEventListener('click', playAgain);
 playAgainButton2.addEventListener('click', playAgain);
 
 function playAgain() {
-    console.log("Play Again")
     gameWinMenu.style.display = "none";
     gameOverMenu.style.display = "none";
     mainMenu.style.display = "block";
