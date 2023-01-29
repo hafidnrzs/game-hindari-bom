@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Game hindari bom">
+  <title>Hindari Bom - Browser Game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section id="main-menu" class="menu">
+      <h1>Hindari Bom</h1>
+      Aturan permainan:
+      <ul>
+        <li>Bom akan ditempatkan pada nomor 1 - 100</li>
+        <li>Pilih nomor 1 - 100</li>
+        <li>Apabila nomor lebih kecil dari nomor bom, maka pilihan sebelumnya akan menjadi batas minimal pada giliran berikutnya</li>
+        <li>Apabila nomor lebih besar dari nomor bom, maka pilihan sebelumnya akan menjadi batas maksimal pada giliran berikutnya</li>
+        <li>Jangan sampai pilih bom!</li>
+      </ul>
+      <button type="button" id="start-button">Mulai</button>
+    </section>
+    <section id="game" class="menu">
+      <div>Pilih nomor <span id="minimalNumber">(min)</span> - <span id="maximalNumber">(max)</span></div>
+      <form class="input-group">
+        <input type="number" min="1" max="100" id="inputNumber" required>
+        <button type="button" id="selectNumber">Pilih</button>
+      </form>
+    </section>
+    <section id="game-win" class="menu">
+      <h1>Kamu menang!</h1>
+      <p>Bom berada di nomor <span id="bombLocation1"></span></p>
+      <button id="playAgainButton1" type="button">Main Lagi</button>
+    </section>
+    <section id="game-over" class="menu">
+      <h1>Kalah!</h1>
+      <p>Bom berada di nomor <span id="bombLocation2"></span></p>
+      <button id="playAgainButton2" type="button">Main Lagi</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
